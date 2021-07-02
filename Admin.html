@@ -1,0 +1,53 @@
+<html>
+    <head>
+	    <style>
+		    body{
+			     background-image:url(Nature.jpg);
+                }
+            .contain{
+                position:absolute;
+                top:20%;
+                left:40%;
+				background-color:white;
+				border-style: solid;
+                border-color: black;
+				padding:60px 40px 50px 40px;
+                }				
+            #ans
+            {
+			  text-align: center;
+            }			
+        </style>   
+    </head>
+    <body>
+	    <form>
+		    <div Class="contain">
+			<h1>Admin Login Form</h1>
+			<label>Name : </label>
+			<input type="text" id="name" required><br><br>
+			<label>Password : </label>
+			<input type="password" id="pass" required><br><br>
+			<div id="ans">
+			<input type="button" value="Login" onclick="Check()">
+			</div>
+			<p id="result"></p>
+			</div>
+		</form>
+	</body>
+</html>	
+<script>
+ var uname=document.getElementById("name");
+ var pword=document.getElementById("pass");
+ var result=document.getElementById("result");
+ function Check()
+ {
+    if(uname.value=="Loges" && pword.value=="someone")
+      location.href = "info.html";
+    else
+	{
+      alert("database not connected");
+      alert("please enter user name as Loges and password as someone"); 	
+	}
+ }
+</script>
+   
